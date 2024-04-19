@@ -1,0 +1,41 @@
+
+> postcss-sass-sample@1.0.0 start
+> npm run scss && npm run sass
+
+
+> postcss-sass-sample@1.0.0 scss
+> node scss.js
+
+= scss.js =
+IT WORKED!
+body {
+  color: red;
+}
+
+> postcss-sass-sample@1.0.0 sass
+> node sass.js
+
+= sass.js =
+CssSyntaxError: <css input>:4:6: Missed semicolon
+    at Input.error ([redacted]/postcss-sass-sample/node_modules/postcss/lib/input.js:106:16)
+    at ScssParser.checkMissedSemicolon ([redacted]/postcss-sass-sample/node_modules/postcss/lib/parser.js:138:22)
+    at ScssParser.decl ([redacted]/postcss-sass-sample/node_modules/postcss/lib/parser.js:296:12)
+    at ScssParser.other ([redacted]/postcss-sass-sample/node_modules/postcss/lib/parser.js:433:12)
+    at ScssParser.parse ([redacted]/postcss-sass-sample/node_modules/postcss/lib/parser.js:470:16)
+    at scssParse ([redacted]/postcss-sass-sample/node_modules/postcss-scss/lib/scss-parse.js:9:10)
+    at new LazyResult ([redacted]/postcss-sass-sample/node_modules/postcss/lib/lazy-result.js:133:16)
+    at Processor.process ([redacted]/postcss-sass-sample/node_modules/postcss/lib/processor.js:53:14)
+    at Object.<anonymous> ([redacted]/postcss-sass-sample/sass.js:20:4)
+    at Module._compile (node:internal/modules/cjs/loader:1254:14) {
+  reason: 'Missed semicolon',
+  source: '\n\t$color: red\n\n\tbody\n\t\tcolor: $color\n',
+  line: 4,
+  column: 6,
+  input: {
+    column: 6,
+    endColumn: undefined,
+    endLine: undefined,
+    line: 4,
+    source: '\n\t$color: red\n\n\tbody\n\t\tcolor: $color\n'
+  }
+}

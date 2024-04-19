@@ -1,0 +1,18 @@
+{
+  "name": "postcss-sass-sample",
+  "version": "1.0.0",
+  "description": "Sample of how to use [`postcss-sass`](https://github.com/csstools/postcss-sass).",
+  "scripts": {
+    "start": "npm run scss && npm run sass",
+    "sass": "node sass.js",
+    "scss": "node scss.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@csstools/postcss-sass": "^5.1.1",
+    "postcss": "^8.4.38",
+    "postcss-scss": "^4.0.9"
+  }
+}
